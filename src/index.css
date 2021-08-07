@@ -3,23 +3,53 @@
 }
 
 body {
+  background-color: rgb(255, 147, 75);
   padding: 100px;
 }
 
 input {
-  width: 50%;
-  font-size: 3rem;
+  width: 100%;
+  font-size: 30px;
+  color: rgb(17, 145, 0);
+  background-color: rgb(240, 204, 184);
+  border-radius: 5px;
 }
 
 .gif-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .gif-item {
-  padding: auto;
-  margin: 0, auto;
+  border: 1px solid rgb(65, 63, 63);
+  border-radius: 3px;
+  margin: 10px 5px;
+  overflow: hidden;
+  width: 170px;
+  height: 170px;
 }
 
-.gif {
+.img {
+  max-width: 170px;
+  min-width: 170px;
+  min-height: 150px;
+  max-height: 150px;
+}
+.li {
+  font-size: 12px;
+  margin-left: 3px;
+}
+
+.pokemon {
   height: 100px;
+  width: 100px;
+  text-align: center;
+}
+
+.buttonDelete {
+  margin-top: 5px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  background-color: rgb(241, 199, 135);
+  color: red;
 }

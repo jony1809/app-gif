@@ -25,9 +25,18 @@ export const AddCategorias = ({ setCategorias, categorias }) => {
   };
 
   const handleDelete = () => {
-    var filtrados = categorias.filter((c) => c !== text);
-    setCategorias(filtrados);
-    setText("");
+    const compara = categorias.find((cat) => cat === text);
+    if (text === "") {
+      alert("No hay categoria escrita para borrar");
+    } else if (compara === text) {
+      var filtrados = categorias.filter((c) => c !== text);
+      setCategorias(filtrados);
+      setText("");
+    } else {
+      alert("Esa categoria no existe");
+      // setCategorias((cat =>[...cat, text]));
+      // setText("");
+    }
   };
 
   return (
@@ -40,7 +49,9 @@ export const AddCategorias = ({ setCategorias, categorias }) => {
           value={text}
         />
       </form>
-      <button onClick={handleDelete}>Borrar Categoria</button>
+      <button className="buttonDelete" onClick={handleDelete}>
+        Borrar categoria
+      </button>
     </>
   );
 };

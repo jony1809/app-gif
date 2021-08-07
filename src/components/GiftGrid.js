@@ -6,7 +6,9 @@ export const GiftGrid = ({ categoria }) => {
 
   return (
     <div>
-      <h3 className="pokeomn">{categoria}</h3>
+      <h3>
+        {categoria} <button className="buttonDelete">X</button>
+      </h3>
 
       {loading && <h4>Cargando</h4>}
       <ol className="gif-container">
@@ -14,6 +16,7 @@ export const GiftGrid = ({ categoria }) => {
           return <GiftGridItem key={img.id} img={img} />;
         })}
       </ol>
+      <hr />
     </div>
   );
 };
