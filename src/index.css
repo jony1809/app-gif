@@ -4,15 +4,16 @@
 
 body {
   background-color: rgb(255, 147, 75);
-  padding: 100px;
+  padding: 40px;
 }
 
 input {
-  width: 100%;
+  width: 99%;
   font-size: 30px;
   color: rgb(17, 145, 0);
   background-color: rgb(240, 204, 184);
   border-radius: 5px;
+  text-align: center;
 }
 
 .gif-container {
@@ -46,10 +47,32 @@ input {
   text-align: center;
 }
 
+.categorias {
+  display: flex;
+  flex-direction: row;
+}
 .buttonDelete {
   margin-top: 5px;
   border: 1px solid #000;
   border-radius: 3px;
   background-color: rgb(241, 199, 135);
   color: red;
+}
+.buttonDelete2 {
+  max-height: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  background-color: rgb(241, 199, 135);
+  color: red;
+}
+
+.stiky {
+  text-align: center;
+  position: sticky;
+  top: 0;
+  margin-top: 100px;
+  background-color: rgb(255, 147, 75);
+  z-index: 5;
 }
